@@ -1,0 +1,98 @@
+// Place all the styles related to the Postits controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+*{
+  margin:0;
+  padding:0;
+}
+body{
+  font-family:arial,sans-serif;
+  font-size:100%;
+  margin:3em;
+  background:black;
+  color:#fff;
+}
+h2,p{
+  font-size:100%;
+  font-weight:normal;
+}
+ul,li{
+  list-style:none;
+}
+ul{
+  padding:3em;
+}
+ul li {
+  text-decoration:none;
+  color:#000;
+  background:#ffc;
+  display:block;
+  height:30em;
+  width:30em;
+  padding:2em;
+  }
+ul li{
+  margin:1em;
+  float:left;
+}
+ul li h2{
+  font-size:140%;
+  font-weight:bold;
+  padding-bottom:10px;
+}
+ul li p{
+  font-family:"Reenie Beanie",arial,sans-serif;
+  font-size:180%;
+}
+ul li{
+  -webkit-transform: rotate(-6deg);
+  //-o-transform: rotate(-6deg);
+  -moz-transform:rotate(-6deg);
+}
+ul li:nth-child(even){
+  //-o-transform:rotate(4deg);
+  -webkit-transform:rotate(4deg);
+  -moz-transform:rotate(4deg);
+  position:relative;
+  top:5px;
+  background:#159993;
+}
+ul li:nth-child(3n){
+  //-o-transform:rotate(-3deg);
+  -webkit-transform:rotate(-3deg);
+  -moz-transform:rotate(-3deg);
+  position:relative;
+  top:-5px;
+  background:#db3a7a;
+}
+ul li:nth-child(5n){
+  //-o-transform:rotate(5deg);
+  -webkit-transform:rotate(5deg);
+  -moz-transform:rotate(5deg);
+  position:relative;
+  top:-10px;
+}
+ul li:hover,ul li a:focus{
+  box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  //-o-transform: scale(1.25);
+  position:relative;
+  z-index:5;
+}
+
+li{display:inline;padding-right:1em;}
+li{color:#fff;}
+
+h2 ul li .sortable-placeholder {
+border: 1px dashed #CCC;
+background-color: #f9f9f9;
+height: 80px;
+margin-bottom: 10px;
+}
+h2 ul li .sortable {
+display: list-item;
+}

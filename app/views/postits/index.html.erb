@@ -1,0 +1,39 @@
+<h1>Here's a List of Your Post-its!</h1>
+<%= link_to 'New postit', new_postit_path %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th colspan="3"></th>
+  </tr>
+
+<script>
+<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+</script>
+<script>
+         $(function() {
+            $( ".note" ).draggable();
+         });
+</script>
+
+  <body>
+    <div class="note">
+      <% @postits.each do |postit| %>
+          <ul>
+            <li>
+                <h2><%= postit.title %></h2>
+                <p><%= postit.text %>
+                <%= link_to 'Show', postit_path(postit) %>
+                <%= link_to 'Edit', edit_postit_path(postit) %>
+                <%= link_to 'Destroy', postit_path(postit),
+                        method: :delete,
+                        data: { confirm: 'Are you sure?' } %>
+                </p>
+            </li>
+          </ul>
+    </div>
+  <% end %>
+</body>
